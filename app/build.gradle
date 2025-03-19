@@ -6,18 +6,17 @@ plugins {
     id("com.google.devtools.ksp") version "1.8.0-1.0.8"
 }
 
-ext.versionMajor = 3
-ext.versionMinor = 1
-ext.versionPatch = 10
+ext.versionMajor = 4
+ext.versionMinor = 0
+ext.versionPatch = 0
 
 android {
-    compileSdkVersion 33
-    buildToolsVersion "30.0.3"
+    compileSdk 34
 
     defaultConfig {
         applicationId "org.mixit.conf"
-        minSdkVersion 28
-        targetSdkVersion 33
+        minSdk 28
+        targetSdk 34
         versionCode versionMajor * 100000 + versionMinor * 100 + versionPatch
         versionName "${versionMajor}.${versionMinor}.${versionPatch}"
 
@@ -34,7 +33,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
 
             buildConfigField "String", "MIXIT_URL", "\"https://mixitconf.org/api/\""
-            buildConfigField "String", "EVENT_API", "\"2023/\""
+            buildConfigField "String", "EVENT_API", "\"2025/\""
             buildConfigField "String", "USER_API", "\"external/\""
 
             def devPropertiesFile = rootProject.file('config-dev.properties')
@@ -48,7 +47,7 @@ android {
         debug {
             // buildConfigField "String", "MIXIT_URL", "\"https://mixitconf-staging.cleverapps.io/api/\""
             buildConfigField "String", "MIXIT_URL", "\"https://mixitconf.org/api/\""
-            buildConfigField "String", "EVENT_API", "\"2023/\""
+            buildConfigField "String", "EVENT_API", "\"2025/\""
             buildConfigField "String", "USER_API", "\"external/\""
 
             def prodPropertiesFile = rootProject.file('config-dev.properties')

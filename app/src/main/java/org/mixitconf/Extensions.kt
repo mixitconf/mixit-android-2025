@@ -34,7 +34,7 @@ fun View.show(show: Boolean) {
  */
 fun Context.hasIntentPackage(type: String): Boolean {
     try {
-        packageManager.getPackageInfo(type, 0)
+        packageManager.getPackageInfo(type, PackageManager.PackageInfoFlags.of(0))
     } catch (e: PackageManager.NameNotFoundException) {
         return false
     }
@@ -104,7 +104,11 @@ val String?.toSlug: String
 fun ImageView.setSpeakerImage(speaker: Speaker) {
     // Speaker images are downloaded on the app startup
     val imageResource = context.resources.getIdentifier(
-        "${speaker.firstname}.${speaker.lastname}".toSlug, "drawable", context.applicationInfo.packageName
+        "${speaker.firstname} ${speaker.lastname}"
+            .lowercase()
+            .replace("-", "_")
+            .replace(" ", "_")
+            .replace("__", "_"), "drawable", context.applicationInfo.packageName
     )
     val size = this.resources.getDimension(R.dimen.image_list_size).toInt()
     Picasso.get()

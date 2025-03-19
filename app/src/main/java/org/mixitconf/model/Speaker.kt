@@ -24,7 +24,7 @@ data class Speaker(
     val links: MutableList<Link> = mutableListOf()
 
     @Ignore
-    val talks: MutableList<Talk> = mutableListOf()
+    val talkXs: MutableList<Talk> = mutableListOf()
 
     val fullname
         get() = "$firstname $lastname".trim()

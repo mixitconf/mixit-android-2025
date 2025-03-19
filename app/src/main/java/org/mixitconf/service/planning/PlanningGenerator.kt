@@ -25,29 +25,28 @@ object PlanningGenerator {
         create(context, Day.One, PLANNING_DAY, 8, 29, R.string.event_day1),
         create(context, Day.One, TalkFormat.PLANNING_WELCOME, 8, 30),
         //create(context, Day.One, TalkFormat.PLANNING_ORGA_SPEECH, 9, 15),
-        create(context, Day.One, TalkFormat.PLANNING_INTRODUCTION_SESSION, 10, 0),
-        create(context, Day.One, TalkFormat.PLANNING_PAUSE_25_MIN, 10, 15),
-        create(context, Day.One, TalkFormat.PLANNING_PAUSE_10_MIN, 11, 30),
-        create(context, Day.One, TalkFormat.PLANNING_LUNCH, 12, 30),
-        create(context, Day.One, TalkFormat.PLANNING_PAUSE_10_MIN, 13, 40),
-        create(context, Day.One, TalkFormat.PLANNING_INTRODUCTION_MIXETTE, 13, 55),
-        create(context, Day.One, TalkFormat.PLANNING_PAUSE_10_MIN, 15, 40),
-        create(context, Day.One, TalkFormat.PLANNING_PAUSE_20_MIN, 16, 40),
-        create(context, Day.One, TalkFormat.PLANNING_PAUSE_10_MIN, 17, 50),
-        create(context, Day.One, TalkFormat.PLANNING_PARTY, 19, 30),
+        //create(context, Day.One, TalkFormat.PLANNING_INTRODUCTION_SESSION, 10, 0),
+        create(context, Day.One, TalkFormat.PLANNING_PAUSE_20_MIN, 10, 0),
+        create(context, Day.One, TalkFormat.PLANNING_PAUSE_25_MIN, 11, 5),
+        create(context, Day.One, TalkFormat.PLANNING_LUNCH, 12, 15),
+        create(context, Day.One, TalkFormat.PLANNING_PAUSE_10_MIN, 14, 30),
+        create(context, Day.One, TalkFormat.PLANNING_PAUSE_20_MIN, 15, 25),
+        create(context, Day.One, TalkFormat.PLANNING_PAUSE_20_MIN, 16, 5),
+        create(context, Day.One, TalkFormat.PLANNING_PAUSE_10_MIN, 16, 45),
+        create(context, Day.One, TalkFormat.PLANNING_PARTY, 19, 0),
 
         create(context, Day.Two, PLANNING_DAY, 8, 29, R.string.event_day2),
         create(context, Day.Two, TalkFormat.PLANNING_WELCOME, 8, 30),
         //create(context, Day.Two, TalkFormat.PLANNING_ORGA_SPEECH, 9, 15),
-        create(context, Day.Two, TalkFormat.PLANNING_INTRODUCTION_SESSION, 10, 0),
-        create(context, Day.Two, TalkFormat.PLANNING_PAUSE_25_MIN, 10, 15),
-        create(context, Day.Two, TalkFormat.PLANNING_PAUSE_10_MIN, 11, 30),
-        create(context, Day.Two, TalkFormat.PLANNING_LUNCH, 12, 30),
-        create(context, Day.Two, TalkFormat.PLANNING_PAUSE_10_MIN, 13, 40),
-        create(context, Day.Two, TalkFormat.PLANNING_ORGA_SPEECH, 13, 55),
-        create(context, Day.Two, TalkFormat.PLANNING_PAUSE_10_MIN, 15, 40),
-        create(context, Day.Two, TalkFormat.PLANNING_PAUSE_20_MIN, 16, 40),
-        create(context, Day.Two, TalkFormat.PLANNING_PAUSE_10_MIN, 17, 50),
+        //create(context, Day.Two, TalkFormat.PLANNING_INTRODUCTION_SESSION, 10, 0),
+        create(context, Day.Two, TalkFormat.PLANNING_PAUSE_20_MIN, 10, 0),
+        create(context, Day.Two, TalkFormat.PLANNING_PAUSE_25_MIN, 11, 5),
+        create(context, Day.Two, TalkFormat.PLANNING_LUNCH, 12, 15),
+        //create(context, Day.Two, TalkFormat.PLANNING_PAUSE_10_MIN, 13, 40),
+        //create(context, Day.Two, TalkFormat.PLANNING_ORGA_SPEECH, 13, 55),
+        create(context, Day.Two, TalkFormat.PLANNING_PAUSE_10_MIN, 14, 30),
+        create(context, Day.Two, TalkFormat.PLANNING_PAUSE_20_MIN, 15, 25),
+        create(context, Day.Two, TalkFormat.PLANNING_PAUSE_20_MIN, 16, 30),
         )
 
     private fun create(
@@ -60,7 +59,7 @@ object PlanningGenerator {
     ) = TalkApiDto(
         id = day.name + talkFormat.name + startHour,
         format = talkFormat,
-        event = "2023",
+        event = "2025",
         title = context.getString(title),
         summary = "",
         speakerIds = emptyList(),
@@ -74,7 +73,7 @@ object PlanningGenerator {
     )
 
     private fun createDate(day: Int, hour: Int, minute: Int): Date {
-        val instant = ZonedDateTime.of(2023, 4, day, hour, minute, 0, 0, ZoneId.of("Europe/Paris"))
+        val instant = ZonedDateTime.of(2025, 4, day, hour, minute, 0, 0, ZoneId.of("Europe/Paris"))
         return Date.from(instant.toInstant())
     }
 }
