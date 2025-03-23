@@ -30,9 +30,9 @@ object PlanningGenerator {
         create(context, Day.One, TalkFormat.PLANNING_PAUSE_25_MIN, 11, 5),
         create(context, Day.One, TalkFormat.PLANNING_LUNCH, 12, 15),
         create(context, Day.One, TalkFormat.PLANNING_PAUSE_10_MIN, 14, 30),
-        create(context, Day.One, TalkFormat.PLANNING_PAUSE_20_MIN, 15, 25),
-        create(context, Day.One, TalkFormat.PLANNING_PAUSE_20_MIN, 16, 5),
-        create(context, Day.One, TalkFormat.PLANNING_PAUSE_10_MIN, 16, 45),
+        create(context, Day.One, TalkFormat.PLANNING_PAUSE_25_MIN, 15, 25),
+        create(context, Day.One, TalkFormat.PLANNING_PAUSE_20_MIN, 16, 10),
+        create(context, Day.One, TalkFormat.PLANNING_PAUSE_10_MIN, 16, 50),
         create(context, Day.One, TalkFormat.PLANNING_PARTY, 19, 0),
 
         create(context, Day.Two, PLANNING_DAY, 8, 29, R.string.event_day2),
@@ -45,7 +45,7 @@ object PlanningGenerator {
         //create(context, Day.Two, TalkFormat.PLANNING_PAUSE_10_MIN, 13, 40),
         //create(context, Day.Two, TalkFormat.PLANNING_ORGA_SPEECH, 13, 55),
         create(context, Day.Two, TalkFormat.PLANNING_PAUSE_10_MIN, 14, 30),
-        create(context, Day.Two, TalkFormat.PLANNING_PAUSE_20_MIN, 15, 25),
+        create(context, Day.Two, TalkFormat.PLANNING_PAUSE_25_MIN, 15, 25),
         create(context, Day.Two, TalkFormat.PLANNING_PAUSE_20_MIN, 16, 30),
         )
 

@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
@@ -37,6 +38,7 @@ class SpeakersFragment : BaseFragment<FragmentSpeakersBinding>() {
 
     private fun initRecyclerView() {
         viewBinding.rvSpeakers.apply {
+            addItemDecoration(DividerItemDecoration(context, RecyclerView.VERTICAL))
             layoutManager = LinearLayoutManager(context)
             adapter = speakersAdapter
         }

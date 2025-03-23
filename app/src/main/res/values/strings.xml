@@ -15,11 +15,11 @@
 
     <!-- Event dates -->
     <string name="event_welcome">The conference from Lyon with crêpes and love</string>
-    <string name="event_dates">25th &amp; 26th April 2024</string>
+    <string name="event_dates">29th &amp; 30th April 2025</string>
 
-    <string name="event_day1">Thursday 25th April</string>
-    <string name="event_day2">Friday 26th April</string>
-    <string name="event_day3">Thursday 26th May</string>
+    <string name="event_day1">Tuesday 29th April</string>
+    <string name="event_day2">Wednesday 30th April</string>
+    <string name="event_day3">Thursday first May</string>
     <string name="language_en">En</string>
 
     <!-- Talk format enum labels -->

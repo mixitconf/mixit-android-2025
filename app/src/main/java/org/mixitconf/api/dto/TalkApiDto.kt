@@ -41,8 +41,8 @@ data class TalkApiDto(
         id,
         format,
         event,
-        title,
-        summary ?: "",
+        title.sanitize(),
+        summary?.sanitize() ?: "",
         speakerIds.joinToString(","),
         language,
         description,
@@ -51,6 +51,11 @@ data class TalkApiDto(
         Date(Instant.parse("${start?.replace("/", "-")}.000Z").toEpochMilli()),
         Date(Instant.parse("${end?.replace("/", "-")}.000Z").toEpochMilli())
     )
+
+    fun String.sanitize() =
+        this.replace("&#39;", "'")
+            .replace("&#39;", "'")
+            .replace("&#34;", "")
 }
 
 

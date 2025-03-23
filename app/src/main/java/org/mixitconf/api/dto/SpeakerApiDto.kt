@@ -26,7 +26,12 @@ data class SpeakerApiDto(
         firstname ?: "",
         lastname ?: "",
         company,
-        description[Language.FRENCH],
-        description[Language.ENGLISH]
+        description[Language.FRENCH]?.sanitize(),
+        description[Language.ENGLISH]?.sanitize()
     )
+
+    fun String.sanitize() =
+        this.replace("';", "'")
+            .replace("&#39;", "'")
+            .replace("&#34;", "")
 }

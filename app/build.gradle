@@ -6,7 +6,7 @@ plugins {
     id("com.google.devtools.ksp") version "1.8.0-1.0.8"
 }
 
-ext.versionMajor = 4
+ext.versionMajor = 5
 ext.versionMinor = 0
 ext.versionPatch = 0
 

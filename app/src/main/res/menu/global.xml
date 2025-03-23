@@ -9,11 +9,6 @@
         app:showAsAction="ifRoom|collapseActionView"/>
 
     <item
-        android:id="@+id/navigation_speakers"
-        android:icon="@drawable/mxt_icon_speaker"
-        android:title="@string/title_fragment_speakers" />
-
-    <item
             android:id="@+id/navigation_twitter"
             android:icon="@drawable/mxt_icon_twitter_zoom"
             android:title="@string/title_twitter_link"

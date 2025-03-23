@@ -106,6 +106,11 @@ fun ImageView.setSpeakerImage(speaker: Speaker) {
     val imageResource = context.resources.getIdentifier(
         "${speaker.firstname} ${speaker.lastname}"
             .lowercase()
+            .replace("é", "e")
+            .replace("è", "e")
+            .replace("ï", "i")
+            .replace("ç", "c")
+            .replace("ë", "e")
             .replace("-", "_")
             .replace(" ", "_")
             .replace("__", "_"), "drawable", context.applicationInfo.packageName
