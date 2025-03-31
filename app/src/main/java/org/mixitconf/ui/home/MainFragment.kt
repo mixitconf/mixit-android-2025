@@ -21,7 +21,7 @@ class MainFragment : BaseFragment<FragmentHomeBinding>() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         viewModel.search().observe(viewLifecycleOwner) { talks ->
             val appContext = activity?.applicationContext
-            if(talks.any { it.event == "2023" } && appContext !=null) {
+            if(talks.any { it.event == "2025" } && appContext !=null) {
                 DataManualSynchronizationWorker.enqueueManualWorker(appContext)
                 Toast.makeText(appContext, R.string.info_sync_start, Toast.LENGTH_LONG).show()
             }
