@@ -50,7 +50,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             viewBinding = this
             setContentView(viewBinding.root)
         }
-        enqueueWorkers(this)
     }
 
     override fun onStart() {
@@ -62,8 +61,5 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         }
     }
 
-    private fun enqueueWorkers(context: Context) {
-        DataSynchronizationWorker.enqueuePeriodicWorker(context)
-    }
 
 }

@@ -10,6 +10,7 @@ import org.mixitconf.database.databaseModule
 import org.mixitconf.service.notification.NotificationChannelManager
 import org.mixitconf.service.serviceModule
 import org.mixitconf.ui.uiModule
+import org.mixitconf.workers.DataSynchronizationWorker
 import timber.log.Timber
 
 /**
@@ -36,6 +37,7 @@ class App : Application() {
         initTimber()
         createNotificationChannels()
         instance = this
+        DataSynchronizationWorker.enqueuePeriodicWorker(this)
     }
 
     private fun createNotificationChannels() {

@@ -9,6 +9,7 @@ import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 import org.mixitconf.R
 import org.mixitconf.databinding.FragmentHomeBinding
 import org.mixitconf.model.enums.TalkFormat
+import org.mixitconf.service.AppPreferences
 import org.mixitconf.ui.BaseFragment
 import org.mixitconf.ui.talk.TalksViewModel
 import org.mixitconf.workers.DataManualSynchronizationWorker
@@ -21,7 +22,9 @@ class MainFragment : BaseFragment<FragmentHomeBinding>() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         viewModel.search().observe(viewLifecycleOwner) { talks ->
             val appContext = activity?.applicationContext
-            if(talks.any { it.event == "2025" } && appContext !=null) {
+            val lastSavedYear  = AppPreferences.synchronizedYear
+            if((lastSavedYear == null || lastSavedYear != "2025") && appContext !=null) {
+                AppPreferences.synchronizedYear = "2025"
                 DataManualSynchronizationWorker.enqueueManualWorker(appContext)
                 Toast.makeText(appContext, R.string.info_sync_start, Toast.LENGTH_LONG).show()
             }

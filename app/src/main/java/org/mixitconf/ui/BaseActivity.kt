@@ -68,7 +68,6 @@ abstract class BaseActivity<T : ViewBinding> : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         R.id.main_nav_host
         when (item.itemId) {
-            R.id.navigation_twitter -> TwitterIntent.start(applicationContext)
             R.id.navigation_settings -> navController.navigate(MainFragmentDirections.actionSettingsFragment())
             R.id.navigation_synchronize -> {
                 if (applicationContext.hasPermission(Manifest.permission.INTERNET)) {
