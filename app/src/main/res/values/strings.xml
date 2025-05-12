@@ -47,16 +47,17 @@
     <string name="room_amphic">C Amphitheatre</string>
     <string name="room_amphid">D Amphitheatre</string>
     <string name="room_amphik">K Amphitheatre</string>
-    <string name="room1">Gosling Room (S102)</string>
+    <string name="room1">Gosling Room</string>
     <string name="room2">Kare Room</string>
-    <string name="room3">Dijkstra Room</string>
+    <string name="room3">Turing Room</string>
     <string name="room4">Nonaka Room</string>
-    <string name="room5">Turing Room</string>
-    <string name="room6">Lovelace Room</string>
-    <string name="room7">Hamilton Room</string>
-    <string name="room8" translatable="false">Salon des symboles</string>
+    <string name="room5">Dijkstra Room</string>
+    <string name="room6">Feinler Room</string>
+    <string name="room7">Hopper Room</string>
+    <string name="room8">Berners Lee Room</string>
+    <string name="room9">Clarke Room</string>
     <string name="room_outside">Outside in the playground</string>
-    <string name="room_mummy">Milky Way room (S110)</string>
+    <string name="room_mummy">Milky Way room</string>
     <string name="room_speaker" translatable="false">Salle du conseil</string>
     <string name="room_unknown">Unknown room</string>
     <string name="room_surprise">Surprise...</string>

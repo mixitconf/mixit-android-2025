@@ -36,11 +36,13 @@
     <string name="talk_format_planning_orha_speech">Introduction de la team</string>
     <string name="room1">Salle Gosling</string>
     <string name="room2">Salle Kare</string>
-    <string name="room3">Salle Dijkstra</string>
+    <string name="room3">Salle Turing</string>
     <string name="room4">Salle Nonaka</string>
-    <string name="room5">Salle Turing</string>
-    <string name="room6">Salle Lovelace</string>
-    <string name="room7">Salle Room (S107)</string>
+    <string name="room5">Salle Dijkstra</string>
+    <string name="room6">Salle Feinler</string>
+    <string name="room7">Salle Hopper</string>
+    <string name="room8">Salle Berners Lee</string>
+    <string name="room9">Salle Clarke</string>
     <string name="room_outside">En extérieur</string>
     <string name="room_mummy">Salle Milky Way (S110)</string>
     <string name="room_unknown">Salle inconnue</string>
